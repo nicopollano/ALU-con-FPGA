@@ -1,8 +1,15 @@
-# ALU-con-FPGA
+# ALU con FPGA
+## Inicio
+Se utilizara la app Vivado-Xilinx 2023.2
+
+[Descargar vivido 2023.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2023-2.html)
+
+Cada uno trabajara sobre su rama (nombrada por su primer nombre), y cuando consideren que el trabajo realizado esta terminado y no presenta ningun error, crear una PR al main, el cual sera revisada por los demas participantes y aprobada por Nicolas.
+
 
 ## Consigna:
 
-Diseñar, implementar, y simular el funcionamiento de una ALU con operandos A y B de 4 bits, y salida R de 4 bits. El diagrama a implementar y el diagrama de pines de la placa a utilizar (Basys3) se pueden observar en el archivo “DiseñoALU.pdf”. En dicho documento se muestra la función a realizar por la ALU la cual se define con 4 bits individuales de control C (C1, C2, C3, C4), permitiendo las siguientes funciones:
+Diseñar, implementar, y simular el funcionamiento de una ALU con operandos A y B de 4 bits, y salida R de 4 bits. El diagrama a implementar y el diagrama de pines de la placa a utilizar (Basys3) se pueden observar en el archivo “[DiseñoALU.pdf](https://drive.google.com/file/d/1eC0AWXBXiHeaeGALjcRdKWXucPSMPGmh/view?usp=sharing)”. En dicho documento se muestra la función a realizar por la ALU la cual se define con 4 bits individuales de control C (C1, C2, C3, C4), permitiendo las siguientes funciones:
 
 - Suma o Resta
 - Saturación o No saturación
@@ -14,7 +21,7 @@ Además del resultado en 4 bits, la ALU debe tener un bit de salida que indique 
 Para realizar el trabajo es imprescindible observar los documentos que se adjuntan, donde se encuentra una explicación conceptual básica al respecto del trabajo, tips a tener en cuenta para el informe, links importantes para el TP3 y DiseñoALU.
 
 ## Consideraciones:
-Se debe implementar el trabajo en lenguaje VHDL utilizando el programa Vivado de Xilinx (ver documento que contiene link de descarga).
+Se debe implementar el trabajo en lenguaje VHDL utilizando el programa Vivado de Xilinx.
 
 Utilizar los leds de la placa L0 a L7 para mostrar los resultados.
 
