@@ -8,10 +8,6 @@
 
 # Cachés y resultados intermedios
 .cache/
-.hw/
-.runs/
-.sim/
-.ip_user_files/
 .xilinx/
 .Xil/
 
