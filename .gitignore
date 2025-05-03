@@ -1,0 +1,26 @@
+# Archivos temporales de Vivado
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+*.webtalk*
+
+# Cachés y resultados intermedios
+.cache/
+.hw/
+.runs/
+.sim/
+.ip_user_files/
+.xilinx/
+.Xil/
+
+# Archivos del sistema operativo
+*.DS_Store
+Thumbs.db
+
+# Backups y archivos temporales
+*~
+*.backup*
+*.tmp
+
