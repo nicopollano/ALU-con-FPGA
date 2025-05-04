@@ -71,9 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 4
-set_param synth.incrementalSynthesisCache C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/.Xil/Vivado-29128-DESKTOP-PV5QM8Q/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/.Xil/Vivado-37324-DESKTOP-PV5QM8Q/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -90,7 +88,10 @@ set_property ip_output_repo c:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMISION2.1.srcs/sources_1/new/main.vhd
+read_vhdl -library xil_defaultlib {
+  C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMISION2.1.srcs/sources_1/new/SumadorRestador.vhd
+  C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMISION2.1.srcs/sources_1/new/main.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
