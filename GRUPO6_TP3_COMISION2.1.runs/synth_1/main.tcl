@@ -70,6 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 4
+set_param synth.incrementalSynthesisCache C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/.Xil/Vivado-29128-DESKTOP-PV5QM8Q/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
@@ -98,6 +104,8 @@ read_xdc C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMIS
 set_property used_in_implementation false [get_files C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMISION2.1.srcs/constrs_1/new/pines.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/GRUPO6_TP3_COMISION2.1.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

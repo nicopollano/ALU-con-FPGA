@@ -1,3 +1,7 @@
+#----------------------------------------
+#       ENTRADA SWITCH A
+#----------------------------------------
+
 set_property PACKAGE_PIN R2 [get_ports {A[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {A[0]}]
 
@@ -10,7 +14,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports {A[2]}]
 set_property PACKAGE_PIN W2 [get_ports {A[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {A[3]}]
 
-
+#----------------------------------------
+#       ENTRADA SWITCH B
+#----------------------------------------
 
 set_property PACKAGE_PIN V17 [get_ports {B[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {B[0]}]
@@ -24,7 +30,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports {B[2]}]
 set_property PACKAGE_PIN W15 [get_ports {B[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {B[3]}]
 
+#----------------------------------------
+#       ENTRADA CONTROL
+#----------------------------------------
 
+set_property PACKAGE_PIN W15 [get_ports {C2}]
+set_property IOSTANDARD LVCMOS33 [get_ports {C2}]
+
+#----------------------------------------
+#       SALIDAS RESULTADO
+#----------------------------------------
 
 set_property PACKAGE_PIN U16 [get_ports {R[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {R[0]}]
@@ -37,3 +52,13 @@ set_property IOSTANDARD LVCMOS33 [get_ports {R[2]}]
 
 set_property PACKAGE_PIN V19 [get_ports {R[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {R[3]}]
+
+#----------------------------------------
+#       SALIDAS SUMADOR
+#----------------------------------------
+
+set_property PACKAGE_PIN P1 [get_ports {OVF}]
+set_property IOSTANDARD LVCMOS33 [get_ports {OVF}]
+
+set_property PACKAGE_PIN L1 [get_ports {CRY}]
+set_property IOSTANDARD LVCMOS33 [get_ports {CRY}]
