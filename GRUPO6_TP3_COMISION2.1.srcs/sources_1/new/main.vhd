@@ -39,6 +39,25 @@ architecture Behavioral of main is
             Ctrl: in std_logic
         );
     end component;
+    
+    component ANDBitaBit
+        Port (
+            BUS_A: in std_logic_vector(3 downto 0);
+            BUS_B: in std_logic_vector(3 downto 0);
+            Res: out std_logic_vector(3 downto 0)
+          );
+    end component;
+    
+    component ORBitaBit
+        Port (
+            BUS_A: in std_logic_vector(3 downto 0);
+            BUS_B: in std_logic_vector(3 downto 0);
+            Res: out std_logic_vector(3 downto 0)
+          );
+    end component;
+    
+    signal R_ANDBitaBit: std_logic_vector(3 downto 0);
+    signal R_ORBitaBit: std_logic_vector(3 downto 0);
 begin
     SumadorRestador_inst : SumadorRestador
         port map(
@@ -58,6 +77,20 @@ begin
             Ctrl  => C3
         );
     
+    ANDBitaBit_inst: ANDBitaBit
+        port map (
+            BUS_A => A,
+            BUS_B => B,
+            Res   => R_ANDBitaBit
+        );
+    
+    ORBitaBit_inst: ORBitaBit
+        port map (
+            BUS_A => A,
+            BUS_B => B,
+            Res   => R_ORBitaBit
+        );
+        
     R <= R_saturator;
     OVF <= OVF_internal;
     CRY <= CRY_internal;
