@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Sun May  4 18:48:29 2025
+| Date         : Mon May  5 01:35:01 2025
 | Host         : DESKTOP-PV5QM8Q running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file main_timing_summary_routed.rpt -pb main_timing_summary_routed.pb -rpx main_timing_summary_routed.rpx -warn_on_violation
 | Design       : main
@@ -59,7 +59,7 @@ Table of Contents
 3. checking pulse_width_clock (0)
 4. checking unconstrained_internal_endpoints (2)
 5. checking no_input_delay (8)
-6. checking no_output_delay (2)
+6. checking no_output_delay (5)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -96,9 +96,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (2)
+6. checking no_output_delay (5)
 -------------------------------
- There are 2 ports with no output delay specified. (HIGH)
+ There are 5 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -220,161 +220,103 @@ Min Delay             8 Endpoints
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 A[1]
-                            (input port)
-  Destination:            R[3]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        12.047ns  (logic 5.212ns (43.265%)  route 6.835ns (56.735%))
-  Logic Levels:           4  (IBUF=1 LUT3=1 LUT6=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T1                                                0.000     0.000 r  A[1] (IN)
-                         net (fo=0)                   0.000     0.000    A[1]
-    T1                   IBUF (Prop_ibuf_I_O)         1.455     1.455 r  A_IBUF[1]_inst/O
-                         net (fo=3, routed)           3.683     5.139    SumadorRestador_inst/A_IBUF[1]
-    SLICE_X0Y27          LUT6 (Prop_lut6_I4_O)        0.124     5.263 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
-                         net (fo=3, routed)           0.766     6.029    SumadorRestador_inst_n_2
-    SLICE_X12Y28         LUT3 (Prop_lut3_I0_O)        0.124     6.153 r  R_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           2.385     8.538    R_OBUF[3]
-    V19                  OBUF (Prop_obuf_I_O)         3.509    12.047 r  R_OBUF[3]_inst/O
-                         net (fo=0)                   0.000    12.047    R[3]
-    V19                                                               r  R[3] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 A[0]
-                            (input port)
-  Destination:            R[0]
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.499ns  (logic 5.313ns (46.203%)  route 6.186ns (53.797%))
-  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    R2                                                0.000     0.000 r  A[0] (IN)
-                         net (fo=0)                   0.000     0.000    A[0]
-    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  A_IBUF[0]_inst/O
-                         net (fo=4, routed)           3.666     5.122    A_IBUF[0]
-    SLICE_X0Y27          LUT2 (Prop_lut2_I0_O)        0.150     5.272 r  R_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           2.520     7.792    R_OBUF[0]
-    U16                  OBUF (Prop_obuf_I_O)         3.707    11.499 r  R_OBUF[0]_inst/O
-                         net (fo=0)                   0.000    11.499    R[0]
-    U16                                                               r  R[0] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 A[0]
+  Source:                 A[2]
                             (input port)
   Destination:            R[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.877ns  (logic 5.110ns (46.978%)  route 5.767ns (53.022%))
-  Logic Levels:           3  (IBUF=1 LUT4=1 OBUF=1)
+  Data Path Delay:        12.628ns  (logic 5.231ns (41.419%)  route 7.398ns (58.581%))
+  Logic Levels:           4  (IBUF=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    R2                                                0.000     0.000 r  A[0] (IN)
-                         net (fo=0)                   0.000     0.000    A[0]
-    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  A_IBUF[0]_inst/O
-                         net (fo=4, routed)           3.666     5.122    A_IBUF[0]
-    SLICE_X0Y27          LUT4 (Prop_lut4_I0_O)        0.124     5.246 r  R_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           2.101     7.347    R_OBUF[1]
-    E19                  OBUF (Prop_obuf_I_O)         3.530    10.877 r  R_OBUF[1]_inst/O
-                         net (fo=0)                   0.000    10.877    R[1]
+    U1                                                0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    U1                   IBUF (Prop_ibuf_I_O)         1.453     1.453 r  A_IBUF[2]_inst/O
+                         net (fo=2, routed)           4.039     5.492    SumadorRestador_inst/A_IBUF[2]
+    SLICE_X1Y21          LUT6 (Prop_lut6_I1_O)        0.124     5.616 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
+                         net (fo=5, routed)           0.879     6.495    SumadorRestador_inst/B[2]
+    SLICE_X0Y21          LUT6 (Prop_lut6_I0_O)        0.124     6.619 r  SumadorRestador_inst/R_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           2.480     9.099    R_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         3.530    12.628 r  R_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    12.628    R[1]
     E19                                                               r  R[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 A[0]
+  Source:                 A[2]
+                            (input port)
+  Destination:            R[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        12.274ns  (logic 5.206ns (42.412%)  route 7.068ns (57.588%))
+  Logic Levels:           4  (IBUF=1 LUT6=2 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U1                                                0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    U1                   IBUF (Prop_ibuf_I_O)         1.453     1.453 r  A_IBUF[2]_inst/O
+                         net (fo=2, routed)           4.039     5.492    SumadorRestador_inst/A_IBUF[2]
+    SLICE_X1Y21          LUT6 (Prop_lut6_I1_O)        0.124     5.616 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
+                         net (fo=5, routed)           0.887     6.502    SumadorRestador_inst/B[2]
+    SLICE_X0Y21          LUT6 (Prop_lut6_I0_O)        0.124     6.626 r  SumadorRestador_inst/R_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           2.143     8.769    R_OBUF[0]
+    U16                  OBUF (Prop_obuf_I_O)         3.505    12.274 r  R_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.274    R[0]
+    U16                                                               r  R[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A[2]
+                            (input port)
+  Destination:            R[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.730ns  (logic 5.210ns (44.416%)  route 6.520ns (55.584%))
+  Logic Levels:           4  (IBUF=1 LUT3=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U1                                                0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    U1                   IBUF (Prop_ibuf_I_O)         1.453     1.453 r  A_IBUF[2]_inst/O
+                         net (fo=2, routed)           4.039     5.492    SumadorRestador_inst/A_IBUF[2]
+    SLICE_X1Y21          LUT6 (Prop_lut6_I1_O)        0.124     5.616 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
+                         net (fo=5, routed)           0.669     6.285    SumadorRestador_inst_n_2
+    SLICE_X0Y21          LUT3 (Prop_lut3_I0_O)        0.124     6.409 r  R_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           1.812     8.221    R_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         3.509    11.730 r  R_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    11.730    R[3]
+    V19                                                               r  R[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A[1]
                             (input port)
   Destination:            R[2]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.658ns  (logic 5.081ns (47.677%)  route 5.576ns (52.323%))
-  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+  Data Path Delay:        11.203ns  (logic 5.204ns (46.453%)  route 5.999ns (53.547%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT6=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    R2                                                0.000     0.000 r  A[0] (IN)
-                         net (fo=0)                   0.000     0.000    A[0]
-    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  A_IBUF[0]_inst/O
-                         net (fo=4, routed)           3.655     5.111    A_IBUF[0]
-    SLICE_X0Y27          LUT6 (Prop_lut6_I1_O)        0.124     5.235 r  R_OBUF[2]_inst_i_1/O
-                         net (fo=1, routed)           1.921     7.157    R_OBUF[2]
-    U19                  OBUF (Prop_obuf_I_O)         3.501    10.658 r  R_OBUF[2]_inst/O
-                         net (fo=0)                   0.000    10.658    R[2]
+    T1                                                0.000     0.000 r  A[1] (IN)
+                         net (fo=0)                   0.000     0.000    A[1]
+    T1                   IBUF (Prop_ibuf_I_O)         1.455     1.455 r  A_IBUF[1]_inst/O
+                         net (fo=3, routed)           3.478     4.933    SumadorRestador_inst/A_IBUF[1]
+    SLICE_X1Y21          LUT4 (Prop_lut4_I1_O)        0.124     5.057 r  SumadorRestador_inst/R_OBUF[2]_inst_i_3/O
+                         net (fo=1, routed)           0.852     5.909    SumadorRestador_inst/R_OBUF[2]_inst_i_3_n_0
+    SLICE_X0Y21          LUT6 (Prop_lut6_I3_O)        0.124     6.033 r  SumadorRestador_inst/R_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           1.669     7.702    R_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         3.501    11.203 r  R_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    11.203    R[2]
     U19                                                               r  R[2] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 A[1]
-                            (input port)
-  Destination:            SumadorRestador_inst/cryTemp_reg/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.973ns  (logic 1.729ns (19.271%)  route 7.244ns (80.729%))
-  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T1                                                0.000     0.000 r  A[1] (IN)
-                         net (fo=0)                   0.000     0.000    A[1]
-    T1                   IBUF (Prop_ibuf_I_O)         1.455     1.455 r  A_IBUF[1]_inst/O
-                         net (fo=3, routed)           3.683     5.139    SumadorRestador_inst/A_IBUF[1]
-    SLICE_X0Y27          LUT6 (Prop_lut6_I4_O)        0.124     5.263 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
-                         net (fo=3, routed)           1.474     6.737    SumadorRestador_inst/B[2]
-    SLICE_X12Y28         LUT3 (Prop_lut3_I2_O)        0.150     6.887 r  SumadorRestador_inst/cryTemp_reg_i_1/O
-                         net (fo=1, routed)           2.086     8.973    SumadorRestador_inst/cryTemp_reg_i_1_n_0
-    SLICE_X48Y60         LDCE                                         r  SumadorRestador_inst/cryTemp_reg/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 A[1]
-                            (input port)
-  Destination:            SumadorRestador_inst/ovfTemp_reg/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.572ns  (logic 1.703ns (19.870%)  route 6.869ns (80.130%))
-  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T1                                                0.000     0.000 r  A[1] (IN)
-                         net (fo=0)                   0.000     0.000    A[1]
-    T1                   IBUF (Prop_ibuf_I_O)         1.455     1.455 r  A_IBUF[1]_inst/O
-                         net (fo=3, routed)           3.683     5.139    SumadorRestador_inst/A_IBUF[1]
-    SLICE_X0Y27          LUT6 (Prop_lut6_I4_O)        0.124     5.263 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
-                         net (fo=3, routed)           1.474     6.737    SumadorRestador_inst/B[2]
-    SLICE_X12Y28         LUT3 (Prop_lut3_I0_O)        0.124     6.861 r  SumadorRestador_inst/ovfTemp_reg_i_1/O
-                         net (fo=1, routed)           1.711     8.572    SumadorRestador_inst/ovfTemp_reg_i_1_n_0
-    SLICE_X48Y47         LDCE                                         r  SumadorRestador_inst/ovfTemp_reg/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 SumadorRestador_inst/cryTemp_reg/G
-                            (positive level-sensitive latch)
-  Destination:            CRY
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.203ns  (logic 4.083ns (56.690%)  route 3.120ns (43.310%))
-  Logic Levels:           2  (LDCE=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y60         LDCE                         0.000     0.000 r  SumadorRestador_inst/cryTemp_reg/G
-    SLICE_X48Y60         LDCE (EnToQ_ldce_G_Q)        0.562     0.562 r  SumadorRestador_inst/cryTemp_reg/Q
-                         net (fo=1, routed)           3.120     3.682    CRY_OBUF
-    L1                   OBUF (Prop_obuf_I_O)         3.521     7.203 r  CRY_OBUF_inst/O
-                         net (fo=0)                   0.000     7.203    CRY
-    L1                                                                r  CRY (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -384,17 +326,81 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.769ns  (logic 4.074ns (60.193%)  route 2.694ns (39.807%))
+  Data Path Delay:        8.687ns  (logic 4.074ns (46.905%)  route 4.612ns (53.096%))
   Logic Levels:           2  (LDCE=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y47         LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
-    SLICE_X48Y47         LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  SumadorRestador_inst/ovfTemp_reg/Q
-                         net (fo=1, routed)           2.694     3.253    OVF_OBUF
-    P1                   OBUF (Prop_obuf_I_O)         3.515     6.769 r  OVF_OBUF_inst/O
-                         net (fo=0)                   0.000     6.769    OVF
+    SLICE_X1Y21          LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
+    SLICE_X1Y21          LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  SumadorRestador_inst/ovfTemp_reg/Q
+                         net (fo=3, routed)           4.612     5.171    OVF_OBUF
+    P1                   OBUF (Prop_obuf_I_O)         3.515     8.687 r  OVF_OBUF_inst/O
+                         net (fo=0)                   0.000     8.687    OVF
     P1                                                                r  OVF (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A[2]
+                            (input port)
+  Destination:            SumadorRestador_inst/cryTemp_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.560ns  (logic 1.696ns (19.812%)  route 6.864ns (80.188%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U1                                                0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    U1                   IBUF (Prop_ibuf_I_O)         1.453     1.453 r  A_IBUF[2]_inst/O
+                         net (fo=2, routed)           4.039     5.492    SumadorRestador_inst/A_IBUF[2]
+    SLICE_X1Y21          LUT6 (Prop_lut6_I1_O)        0.124     5.616 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
+                         net (fo=5, routed)           0.496     6.111    SumadorRestador_inst/B[2]
+    SLICE_X1Y21          LUT3 (Prop_lut3_I2_O)        0.119     6.230 r  SumadorRestador_inst/cryTemp_reg_i_1/O
+                         net (fo=1, routed)           2.330     8.560    SumadorRestador_inst/cryTemp_reg_i_1_n_0
+    SLICE_X34Y54         LDCE                                         r  SumadorRestador_inst/cryTemp_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SumadorRestador_inst/cryTemp_reg/G
+                            (positive level-sensitive latch)
+  Destination:            CRY
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.802ns  (logic 4.152ns (53.226%)  route 3.649ns (46.774%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y54         LDCE                         0.000     0.000 r  SumadorRestador_inst/cryTemp_reg/G
+    SLICE_X34Y54         LDCE (EnToQ_ldce_G_Q)        0.631     0.631 r  SumadorRestador_inst/cryTemp_reg/Q
+                         net (fo=1, routed)           3.649     4.280    CRY_OBUF
+    L1                   OBUF (Prop_obuf_I_O)         3.521     7.802 r  CRY_OBUF_inst/O
+                         net (fo=0)                   0.000     7.802    CRY
+    L1                                                                r  CRY (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 A[2]
+                            (input port)
+  Destination:            SumadorRestador_inst/ovfTemp_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.614ns  (logic 1.701ns (25.716%)  route 4.913ns (74.284%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U1                                                0.000     0.000 r  A[2] (IN)
+                         net (fo=0)                   0.000     0.000    A[2]
+    U1                   IBUF (Prop_ibuf_I_O)         1.453     1.453 r  A_IBUF[2]_inst/O
+                         net (fo=2, routed)           4.039     5.492    SumadorRestador_inst/A_IBUF[2]
+    SLICE_X1Y21          LUT6 (Prop_lut6_I1_O)        0.124     5.616 r  SumadorRestador_inst/R_OBUF[3]_inst_i_2/O
+                         net (fo=5, routed)           0.496     6.111    SumadorRestador_inst/B[2]
+    SLICE_X1Y21          LUT3 (Prop_lut3_I0_O)        0.124     6.235 r  SumadorRestador_inst/ovfTemp_reg_i_1/O
+                         net (fo=1, routed)           0.379     6.614    SumadorRestador_inst/ovfTemp_reg_i_1_n_0
+    SLICE_X1Y21          LDCE                                         r  SumadorRestador_inst/ovfTemp_reg/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -409,7 +415,7 @@ Slack:                    inf
   Destination:            SumadorRestador_inst/ovfTemp_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.009ns  (logic 0.264ns (13.136%)  route 1.745ns (86.864%))
+  Data Path Delay:        1.039ns  (logic 0.264ns (25.395%)  route 0.775ns (74.605%))
   Logic Levels:           2  (IBUF=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -417,10 +423,10 @@ Slack:                    inf
     W15                                               0.000     0.000 r  B[3] (IN)
                          net (fo=0)                   0.000     0.000    B[3]
     W15                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  B_IBUF[3]_inst/O
-                         net (fo=3, routed)           0.951     1.169    SumadorRestador_inst/B_IBUF[3]
-    SLICE_X12Y28         LUT3 (Prop_lut3_I1_O)        0.045     1.214 r  SumadorRestador_inst/ovfTemp_reg_i_1/O
-                         net (fo=1, routed)           0.794     2.009    SumadorRestador_inst/ovfTemp_reg_i_1_n_0
-    SLICE_X48Y47         LDCE                                         r  SumadorRestador_inst/ovfTemp_reg/D
+                         net (fo=6, routed)           0.659     0.878    SumadorRestador_inst/B_IBUF[3]
+    SLICE_X1Y21          LUT3 (Prop_lut3_I1_O)        0.045     0.923 r  SumadorRestador_inst/ovfTemp_reg_i_1/O
+                         net (fo=1, routed)           0.116     1.039    SumadorRestador_inst/ovfTemp_reg_i_1_n_0
+    SLICE_X1Y21          LDCE                                         r  SumadorRestador_inst/ovfTemp_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -429,7 +435,7 @@ Slack:                    inf
   Destination:            SumadorRestador_inst/cryTemp_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.171ns  (logic 0.262ns (12.063%)  route 1.909ns (87.937%))
+  Data Path Delay:        1.996ns  (logic 0.262ns (13.121%)  route 1.734ns (86.879%))
   Logic Levels:           2  (IBUF=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -437,118 +443,79 @@ Slack:                    inf
     W15                                               0.000     0.000 r  B[3] (IN)
                          net (fo=0)                   0.000     0.000    B[3]
     W15                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  B_IBUF[3]_inst/O
-                         net (fo=3, routed)           0.951     1.169    SumadorRestador_inst/B_IBUF[3]
-    SLICE_X12Y28         LUT3 (Prop_lut3_I0_O)        0.043     1.212 r  SumadorRestador_inst/cryTemp_reg_i_1/O
-                         net (fo=1, routed)           0.958     2.171    SumadorRestador_inst/cryTemp_reg_i_1_n_0
-    SLICE_X48Y60         LDCE                                         r  SumadorRestador_inst/cryTemp_reg/D
+                         net (fo=6, routed)           0.659     0.878    SumadorRestador_inst/B_IBUF[3]
+    SLICE_X1Y21          LUT3 (Prop_lut3_I0_O)        0.043     0.921 r  SumadorRestador_inst/cryTemp_reg_i_1/O
+                         net (fo=1, routed)           1.075     1.996    SumadorRestador_inst/cryTemp_reg_i_1_n_0
+    SLICE_X34Y54         LDCE                                         r  SumadorRestador_inst/cryTemp_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SumadorRestador_inst/ovfTemp_reg/G
                             (positive level-sensitive latch)
-  Destination:            OVF
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.198ns  (logic 1.374ns (62.533%)  route 0.823ns (37.467%))
-  Logic Levels:           2  (LDCE=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y47         LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
-    SLICE_X48Y47         LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  SumadorRestador_inst/ovfTemp_reg/Q
-                         net (fo=1, routed)           0.823     0.981    OVF_OBUF
-    P1                   OBUF (Prop_obuf_I_O)         1.216     2.198 r  OVF_OBUF_inst/O
-                         net (fo=0)                   0.000     2.198    OVF
-    P1                                                                r  OVF (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 SumadorRestador_inst/cryTemp_reg/G
-                            (positive level-sensitive latch)
-  Destination:            CRY
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.409ns  (logic 1.385ns (57.508%)  route 1.024ns (42.492%))
-  Logic Levels:           2  (LDCE=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y60         LDCE                         0.000     0.000 r  SumadorRestador_inst/cryTemp_reg/G
-    SLICE_X48Y60         LDCE (EnToQ_ldce_G_Q)        0.163     0.163 r  SumadorRestador_inst/cryTemp_reg/Q
-                         net (fo=1, routed)           1.024     1.187    CRY_OBUF
-    L1                   OBUF (Prop_obuf_I_O)         1.222     2.409 r  CRY_OBUF_inst/O
-                         net (fo=0)                   0.000     2.409    CRY
-    L1                                                                r  CRY (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 B[2]
-                            (input port)
   Destination:            R[2]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.552ns  (logic 1.479ns (57.947%)  route 1.073ns (42.053%))
-  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+  Data Path Delay:        2.192ns  (logic 1.450ns (66.141%)  route 0.742ns (33.859%))
+  Logic Levels:           4  (LDCE=1 LUT2=1 LUT6=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    W16                                               0.000     0.000 r  B[2] (IN)
-                         net (fo=0)                   0.000     0.000    B[2]
-    W16                  IBUF (Prop_ibuf_I_O)         0.232     0.232 r  B_IBUF[2]_inst/O
-                         net (fo=2, routed)           0.617     0.849    B_IBUF[2]
-    SLICE_X0Y27          LUT6 (Prop_lut6_I4_O)        0.045     0.894 r  R_OBUF[2]_inst_i_1/O
-                         net (fo=1, routed)           0.456     1.350    R_OBUF[2]
-    U19                  OBUF (Prop_obuf_I_O)         1.202     2.552 r  R_OBUF[2]_inst/O
-                         net (fo=0)                   0.000     2.552    R[2]
+    SLICE_X1Y21          LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
+    SLICE_X1Y21          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  SumadorRestador_inst/ovfTemp_reg/Q
+                         net (fo=3, routed)           0.248     0.406    SumadorRestador_inst/OVF_OBUF
+    SLICE_X0Y20          LUT2 (Prop_lut2_I1_O)        0.045     0.451 r  SumadorRestador_inst/R_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           0.169     0.620    SumadorRestador_inst/R_OBUF[2]_inst_i_2_n_0
+    SLICE_X0Y21          LUT6 (Prop_lut6_I2_O)        0.045     0.665 r  SumadorRestador_inst/R_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           0.325     0.990    R_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         1.202     2.192 r  R_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     2.192    R[2]
     U19                                                               r  R[2] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 B[1]
-                            (input port)
+  Source:                 SumadorRestador_inst/ovfTemp_reg/G
+                            (positive level-sensitive latch)
   Destination:            R[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.769ns  (logic 1.505ns (54.350%)  route 1.264ns (45.650%))
-  Logic Levels:           3  (IBUF=1 LUT4=1 OBUF=1)
+  Data Path Delay:        2.249ns  (logic 1.434ns (63.745%)  route 0.815ns (36.255%))
+  Logic Levels:           3  (LDCE=1 LUT6=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    V16                                               0.000     0.000 r  B[1] (IN)
-                         net (fo=0)                   0.000     0.000    B[1]
-    V16                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  B_IBUF[1]_inst/O
-                         net (fo=3, routed)           0.747     0.976    B_IBUF[1]
-    SLICE_X0Y27          LUT4 (Prop_lut4_I2_O)        0.045     1.021 r  R_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           0.517     1.538    R_OBUF[1]
-    E19                  OBUF (Prop_obuf_I_O)         1.231     2.769 r  R_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     2.769    R[1]
+    SLICE_X1Y21          LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
+    SLICE_X1Y21          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  SumadorRestador_inst/ovfTemp_reg/Q
+                         net (fo=3, routed)           0.124     0.282    SumadorRestador_inst/OVF_OBUF
+    SLICE_X0Y21          LUT6 (Prop_lut6_I4_O)        0.045     0.327 r  SumadorRestador_inst/R_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           0.692     1.018    R_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         1.231     2.249 r  R_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.249    R[1]
     E19                                                               r  R[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 B[0]
-                            (input port)
+  Source:                 SumadorRestador_inst/ovfTemp_reg/G
+                            (positive level-sensitive latch)
   Destination:            R[0]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.067ns  (logic 1.533ns (49.973%)  route 1.534ns (50.027%))
-  Logic Levels:           3  (IBUF=1 LUT2=1 OBUF=1)
+  Data Path Delay:        2.404ns  (logic 1.454ns (60.475%)  route 0.950ns (39.525%))
+  Logic Levels:           4  (LDCE=1 LUT2=1 LUT6=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    V17                                               0.000     0.000 r  B[0] (IN)
-                         net (fo=0)                   0.000     0.000    B[0]
-    V17                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  B_IBUF[0]_inst/O
-                         net (fo=4, routed)           0.822     1.043    B_IBUF[0]
-    SLICE_X0Y27          LUT2 (Prop_lut2_I1_O)        0.044     1.087 r  R_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           0.713     1.799    R_OBUF[0]
-    U16                  OBUF (Prop_obuf_I_O)         1.268     3.067 r  R_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     3.067    R[0]
+    SLICE_X1Y21          LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
+    SLICE_X1Y21          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  SumadorRestador_inst/ovfTemp_reg/Q
+                         net (fo=3, routed)           0.248     0.406    SumadorRestador_inst/OVF_OBUF
+    SLICE_X0Y20          LUT2 (Prop_lut2_I1_O)        0.045     0.451 r  SumadorRestador_inst/R_OBUF[2]_inst_i_2/O
+                         net (fo=2, routed)           0.163     0.614    SumadorRestador_inst/R_OBUF[2]_inst_i_2_n_0
+    SLICE_X0Y21          LUT6 (Prop_lut6_I3_O)        0.045     0.659 r  SumadorRestador_inst/R_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.539     1.198    R_OBUF[0]
+    U16                  OBUF (Prop_obuf_I_O)         1.206     2.404 r  R_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.404    R[0]
     U16                                                               r  R[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -559,7 +526,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.130ns  (logic 1.474ns (47.095%)  route 1.656ns (52.905%))
+  Data Path Delay:        2.596ns  (logic 1.474ns (56.781%)  route 1.122ns (43.219%))
   Logic Levels:           3  (IBUF=1 LUT3=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -567,12 +534,52 @@ Slack:                    inf
     W15                                               0.000     0.000 r  B[3] (IN)
                          net (fo=0)                   0.000     0.000    B[3]
     W15                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  B_IBUF[3]_inst/O
-                         net (fo=3, routed)           0.951     1.169    B_IBUF[3]
-    SLICE_X12Y28         LUT3 (Prop_lut3_I1_O)        0.045     1.214 r  R_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           0.705     1.920    R_OBUF[3]
-    V19                  OBUF (Prop_obuf_I_O)         1.210     3.130 r  R_OBUF[3]_inst/O
-                         net (fo=0)                   0.000     3.130    R[3]
+                         net (fo=6, routed)           0.724     0.943    B_IBUF[3]
+    SLICE_X0Y21          LUT3 (Prop_lut3_I1_O)        0.045     0.988 r  R_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           0.398     1.386    R_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         1.210     2.596 r  R_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.596    R[3]
     V19                                                               r  R[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SumadorRestador_inst/cryTemp_reg/G
+                            (positive level-sensitive latch)
+  Destination:            CRY
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.702ns  (logic 1.403ns (51.949%)  route 1.298ns (48.051%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y54         LDCE                         0.000     0.000 r  SumadorRestador_inst/cryTemp_reg/G
+    SLICE_X34Y54         LDCE (EnToQ_ldce_G_Q)        0.181     0.181 r  SumadorRestador_inst/cryTemp_reg/Q
+                         net (fo=1, routed)           1.298     1.479    CRY_OBUF
+    L1                   OBUF (Prop_obuf_I_O)         1.222     2.702 r  CRY_OBUF_inst/O
+                         net (fo=0)                   0.000     2.702    CRY
+    L1                                                                r  CRY (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SumadorRestador_inst/ovfTemp_reg/G
+                            (positive level-sensitive latch)
+  Destination:            OVF
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.189ns  (logic 1.374ns (43.104%)  route 1.814ns (56.896%))
+  Logic Levels:           2  (LDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y21          LDCE                         0.000     0.000 r  SumadorRestador_inst/ovfTemp_reg/G
+    SLICE_X1Y21          LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  SumadorRestador_inst/ovfTemp_reg/Q
+                         net (fo=3, routed)           1.814     1.972    OVF_OBUF
+    P1                   OBUF (Prop_obuf_I_O)         1.216     3.189 r  OVF_OBUF_inst/O
+                         net (fo=0)                   0.000     3.189    OVF
+    P1                                                                r  OVF (OUT)
   -------------------------------------------------------------------    -------------------
 
 

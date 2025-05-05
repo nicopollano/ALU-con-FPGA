@@ -21,6 +21,8 @@ begin
     variable tempSum: unsigned(4 downto 0);
     variable tempRes: signed(4 downto 0);
     begin
+        ovfTemp <= '0';
+        cryTemp <= '0';
         if(Ctrl = '0') then
             tempSum := ('0' & unsigned(BUS_A)) + ('0' & unsigned(BUS_B));
             cryTemp <= tempSum(4);
