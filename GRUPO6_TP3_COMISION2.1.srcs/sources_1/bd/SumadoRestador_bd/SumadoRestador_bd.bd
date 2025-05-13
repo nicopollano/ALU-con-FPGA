@@ -1,0 +1,407 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1A051D4F0C74822E",
+      "device": "xc7a35ticpg236-1L",
+      "gen_directory": "../../../../GRUPO6_TP3_COMISION2.1.gen/sources_1/bd/SumadoRestador_bd",
+      "name": "SumadoRestador_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "util_vector_logic_2": "",
+      "util_vector_logic_3": "",
+      "util_vector_logic_4": "",
+      "util_vector_logic_5": "",
+      "util_vector_logic_6": "",
+      "xlslice_0": "",
+      "xlslice_2": "",
+      "xlslice_3": "",
+      "xlslice_4": "",
+      "xlslice_5": "",
+      "util_vector_logic_7": "",
+      "util_vector_logic_8": "",
+      "xlconcat_0": "",
+      "xlconcat_1": ""
+    },
+    "ports": {
+      "A": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "R": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "Cry": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "B": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_0_0",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_0_0\\SumadoRestador_bd_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "3"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_0_1",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_0_1\\SumadoRestador_bd_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "4"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_2_1",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_2_1\\SumadoRestador_bd_util_vector_logic_2_1.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_SIZE": {
+            "value": "3"
+          }
+        }
+      },
+      "util_vector_logic_3": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_2_2",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_2_2\\SumadoRestador_bd_util_vector_logic_2_2.xci",
+        "inst_hier_path": "util_vector_logic_3",
+        "parameters": {
+          "C_SIZE": {
+            "value": "4"
+          }
+        }
+      },
+      "util_vector_logic_4": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_2_3",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_2_3\\SumadoRestador_bd_util_vector_logic_2_3.xci",
+        "inst_hier_path": "util_vector_logic_4",
+        "parameters": {
+          "C_SIZE": {
+            "value": "4"
+          }
+        }
+      },
+      "util_vector_logic_5": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_2_4",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_2_4\\SumadoRestador_bd_util_vector_logic_2_4.xci",
+        "inst_hier_path": "util_vector_logic_5",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "3"
+          }
+        }
+      },
+      "util_vector_logic_6": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_2_5",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_2_5\\SumadoRestador_bd_util_vector_logic_2_5.xci",
+        "inst_hier_path": "util_vector_logic_6",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "3"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_xlslice_0_3",
+        "xci_path": "ip\\SumadoRestador_bd_xlslice_0_3\\SumadoRestador_bd_xlslice_0_3.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_xlslice_1_1",
+        "xci_path": "ip\\SumadoRestador_bd_xlslice_1_1\\SumadoRestador_bd_xlslice_1_1.xci",
+        "inst_hier_path": "xlslice_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_3": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_xlslice_2_0",
+        "xci_path": "ip\\SumadoRestador_bd_xlslice_2_0\\SumadoRestador_bd_xlslice_2_0.xci",
+        "inst_hier_path": "xlslice_3",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_4": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_xlslice_2_1",
+        "xci_path": "ip\\SumadoRestador_bd_xlslice_2_1\\SumadoRestador_bd_xlslice_2_1.xci",
+        "inst_hier_path": "xlslice_4",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_5": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_xlslice_3_0",
+        "xci_path": "ip\\SumadoRestador_bd_xlslice_3_0\\SumadoRestador_bd_xlslice_3_0.xci",
+        "inst_hier_path": "xlslice_5",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "util_vector_logic_7": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_1_0",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_1_0\\SumadoRestador_bd_util_vector_logic_1_0.xci",
+        "inst_hier_path": "util_vector_logic_7",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_8": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "SumadoRestador_bd_util_vector_logic_3_0",
+        "xci_path": "ip\\SumadoRestador_bd_util_vector_logic_3_0\\SumadoRestador_bd_util_vector_logic_3_0.xci",
+        "inst_hier_path": "util_vector_logic_8",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "SumadoRestador_bd_xlconcat_0_0",
+        "xci_path": "ip\\SumadoRestador_bd_xlconcat_0_0\\SumadoRestador_bd_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "3"
+          },
+          "IN1_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconcat_1": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "SumadoRestador_bd_xlconcat_0_1",
+        "xci_path": "ip\\SumadoRestador_bd_xlconcat_0_1\\SumadoRestador_bd_xlconcat_0_1.xci",
+        "inst_hier_path": "xlconcat_1",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "3"
+          },
+          "IN1_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "A_1": {
+        "ports": [
+          "A",
+          "xlslice_2/Din",
+          "xlslice_4/Din"
+        ]
+      },
+      "B1_1": {
+        "ports": [
+          "B",
+          "xlslice_3/Din",
+          "xlslice_5/Din"
+        ]
+      },
+      "B_1": {
+        "ports": [
+          "xlslice_3/Dout",
+          "util_vector_logic_2/Op2",
+          "util_vector_logic_3/Op1",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "xlconcat_1/In0"
+        ]
+      },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "util_vector_logic_5/Op1"
+        ]
+      },
+      "util_vector_logic_3_Res": {
+        "ports": [
+          "util_vector_logic_3/Res",
+          "util_vector_logic_5/Op2"
+        ]
+      },
+      "util_vector_logic_4_Res": {
+        "ports": [
+          "util_vector_logic_4/Res",
+          "util_vector_logic_6/Op2"
+        ]
+      },
+      "util_vector_logic_5_Res": {
+        "ports": [
+          "util_vector_logic_5/Res",
+          "util_vector_logic_6/Op1"
+        ]
+      },
+      "util_vector_logic_6_Res": {
+        "ports": [
+          "xlconcat_0/dout",
+          "util_vector_logic_3/Op2",
+          "util_vector_logic_4/Op2",
+          "util_vector_logic_1/Op2",
+          "xlslice_0/Din"
+        ]
+      },
+      "util_vector_logic_6_Res1": {
+        "ports": [
+          "util_vector_logic_6/Res",
+          "xlconcat_0/In0"
+        ]
+      },
+      "util_vector_logic_7_Res": {
+        "ports": [
+          "util_vector_logic_7/Res",
+          "xlconcat_1/In1"
+        ]
+      },
+      "util_vector_logic_8_Res": {
+        "ports": [
+          "util_vector_logic_8/Res",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlconcat_1_dout": {
+        "ports": [
+          "xlconcat_1/dout",
+          "R"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "Cry"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "util_vector_logic_2/Op1",
+          "util_vector_logic_4/Op1",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "xlslice_4_Dout": {
+        "ports": [
+          "xlslice_4/Dout",
+          "util_vector_logic_7/Op1",
+          "util_vector_logic_8/Op1"
+        ]
+      },
+      "xlslice_5_Dout": {
+        "ports": [
+          "xlslice_5/Dout",
+          "util_vector_logic_7/Op2",
+          "util_vector_logic_8/Op2"
+        ]
+      }
+    }
+  }
+}

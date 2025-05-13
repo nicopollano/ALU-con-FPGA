@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/SumadoRestador_bd/sim/SumadoRestador_bd.vhd" \
+
+# Do not sort compile order
+nosort

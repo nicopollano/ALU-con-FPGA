@@ -126,7 +126,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 4
-  set_param synth.incrementalSynthesisCache C:/Users/nico_/Documents/Xilinc/GRUPO6_TP3_COMISION2.1/.Xil/Vivado-31284-DESKTOP-PV5QM8Q/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/nico_/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7148-DESKTOP-PV5QM8Q/incrSyn
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35ticpg236-1L

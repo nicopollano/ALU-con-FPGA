@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Color Coded_Layers":"/clk_100MHz_1:true|/sum4_S:true|/sum1_C_OUT:true|/clk_100MHz_1_1:true|/sum3_C_OUT:true|/sum2_S:true|/sum1_S:true|/sum4_C_OUT:true|/clk_100MHz_2_1:true|/sum2_C_OUT:true|/clk_100MHz_3_1:true|/sum3_S:true|",
+   "Color Coded_ScaleFactor":"0.820847",
+   "Color Coded_TopLeft":"-508,2",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-980,-442",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeData":"true",
+   "Display-PortTypeOthers":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/clk_100MHz_1:false|/sum4_S:false|/sum1_C_OUT:false|/clk_100MHz_1_1:false|/sum3_C_OUT:false|/sum2_S:false|/sum1_S:false|/sum4_C_OUT:false|/clk_100MHz_2_1:false|/sum2_C_OUT:false|/clk_100MHz_3_1:false|/sum3_S:false|",
+   "Interfaces View_ScaleFactor":"0.8",
+   "Interfaces View_TopLeft":"-516,35",
+   "PinnedBlocks":"",
+   "PinnedPorts":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace portBus A -pg 1 -lvl 0 -x -330 -y -150 -defaultsOSRD
+preplace portBus B -pg 1 -lvl 0 -x -330 -y -230 -defaultsOSRD
+levelinfo -pg 1 -330 -210 -20
+pagesize -pg 1 -db -bbox -sgen -420 -370 200 120
+"
+}
+{
+   "da_clkrst_cnt":"13"
+}
