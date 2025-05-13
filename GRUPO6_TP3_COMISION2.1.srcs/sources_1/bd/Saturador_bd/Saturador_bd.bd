@@ -1,0 +1,181 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35ticpg236-1L",
+      "gen_directory": "../../../../GRUPO6_TP3_COMISION2.1.gen/sources_1/bd/Saturador_bd",
+      "name": "Saturador_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "xlslice_0": "",
+      "xlconcat_0": "",
+      "Multiplexor_0": ""
+    },
+    "ports": {
+      "OVF": {
+        "direction": "I"
+      },
+      "Ctrl": {
+        "direction": "I"
+      },
+      "BUS_R": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "BUS_R_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "Saturador_bd_util_vector_logic_0_0",
+        "xci_path": "ip\\Saturador_bd_util_vector_logic_0_0\\Saturador_bd_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "3",
+        "xci_name": "Saturador_bd_util_vector_logic_0_1",
+        "xci_path": "ip\\Saturador_bd_util_vector_logic_0_1\\Saturador_bd_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "Saturador_bd_xlslice_0_0",
+        "xci_path": "ip\\Saturador_bd_xlslice_0_0\\Saturador_bd_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_TO": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "Saturador_bd_xlconcat_0_0",
+        "xci_path": "ip\\Saturador_bd_xlconcat_0_0\\Saturador_bd_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "Multiplexor_0": {
+        "vlnv": "xilinx.com:module_ref:Multiplexor:1.0",
+        "ip_revision": "1",
+        "xci_name": "Saturador_bd_Multiplexor_0_0",
+        "xci_path": "ip\\Saturador_bd_Multiplexor_0_0\\Saturador_bd_Multiplexor_0_0.xci",
+        "inst_hier_path": "Multiplexor_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Multiplexor",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Ctrl": {
+            "direction": "I"
+          },
+          "BUS_A": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BUS_B": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BUS_R": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BUS_R_1": {
+        "ports": [
+          "BUS_R",
+          "xlslice_0/Din",
+          "Multiplexor_0/BUS_B"
+        ]
+      },
+      "Ctrl_1": {
+        "ports": [
+          "Ctrl",
+          "util_vector_logic_0/Op2",
+          "Multiplexor_0/Ctrl"
+        ]
+      },
+      "Multiplexor_0_BUS_R": {
+        "ports": [
+          "Multiplexor_0/BUS_R",
+          "BUS_R_out"
+        ]
+      },
+      "OVF_1": {
+        "ports": [
+          "OVF",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "xlconcat_0/In0",
+          "xlconcat_0/In2",
+          "xlconcat_0/In1",
+          "xlconcat_0/In3"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "Multiplexor_0/BUS_A"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "util_vector_logic_1/Op2"
+        ]
+      }
+    }
+  }
+}

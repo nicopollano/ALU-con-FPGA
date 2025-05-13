@@ -14,28 +14,25 @@ entity SumadorRestador is
 end SumadorRestador;
 
 architecture Behavioral of SumadorRestador is
-    signal ovfTemp: std_ulogic;
-    signal cryTemp: std_ulogic;
+    signal ovfTemp: std_logic := '0';
+    signal cryTemp: std_logic := '0';
 begin
     process(Ctrl, BUS_A, BUS_B)
-    variable tempSum: unsigned(4 downto 0);
-    variable tempRes: signed(4 downto 0);
+    variable tempOp: signed(4 downto 0);
     begin
-        ovfTemp <= '0';
-        cryTemp <= '0';
         if(Ctrl = '0') then
-            tempSum := ('0' & unsigned(BUS_A)) + ('0' & unsigned(BUS_B));
-            cryTemp <= tempSum(4);
-            BUS_R <= std_logic_vector(tempSum(3 downto 0));
+            tempOp :=  signed('0' & BUS_A) + signed('0' & BUS_B);
+            
         else
-            tempRes := signed('0' & BUS_A) + signed('0' & BUS_B);
-            if ((BUS_A(3) = BUS_B(3)) and (BUS_A(3) /= tempRes(3))) then
-                ovfTemp <= '1';
-            else
-                ovfTemp <= '0';
-            end if;
-            BUS_R <= std_logic_vector(tempRes(3 downto 0));
+            tempOp := signed('0' & BUS_A) - signed('0' & BUS_B);
         end if;
+        cryTemp <= tempOp(4);
+        if ((BUS_A(3) = BUS_B(3)) and (tempOp(4) /= tempOp(3))) then
+            ovfTemp <= '1';
+        else
+            ovfTemp <= '0';
+        end if;
+        BUS_R <= std_logic_vector(tempOp(3 downto 0));
     end process;
     
     Ovf <= ovfTemp;

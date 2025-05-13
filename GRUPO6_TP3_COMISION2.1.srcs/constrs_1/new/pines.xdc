@@ -34,18 +34,23 @@ set_property IOSTANDARD LVCMOS33 [get_ports {B[3]}]
 #       ENTRADA CONTROL
 #----------------------------------------
 
-set_property PACKAGE_PIN W13 [get_ports {C1}]
+set_property PACKAGE_PIN W19 [get_ports {C1}]
 set_property IOSTANDARD LVCMOS33 [get_ports {C1}]
+set_property PULLDOWN true [get_ports {C1}]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets C2]
-set_property PACKAGE_PIN V15 [get_ports {C2}]
+set_property PACKAGE_PIN T17 [get_ports {C2}]
 set_property IOSTANDARD LVCMOS33 [get_ports {C2}]
+set_property PULLDOWN true [get_ports {C2}]
 
-set_property PACKAGE_PIN W14 [get_ports {C3}]
+set_property PACKAGE_PIN T18 [get_ports {C3}]
 set_property IOSTANDARD LVCMOS33 [get_ports {C3}]
+set_property PULLDOWN true [get_ports {C3}]
 
-set_property PACKAGE_PIN V2 [get_ports {C4}]
+set_property PACKAGE_PIN U18 [get_ports {C4}]
 set_property IOSTANDARD LVCMOS33 [get_ports {C4}]
+set_property PULLDOWN true [get_ports {C4}]
+
 #----------------------------------------
 #       SALIDAS RESULTADO
 #----------------------------------------

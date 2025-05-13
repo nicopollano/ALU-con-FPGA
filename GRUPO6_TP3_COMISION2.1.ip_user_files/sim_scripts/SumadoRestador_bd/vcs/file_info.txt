@@ -1,0 +1,12 @@
+util_vector_logic_v2_0_vl_rfs.v,verilog,util_vector_logic_v2_0_3,../../../../GRUPO6_TP3_COMISION2.1.gen/sources_1/bd/SumadoRestador_bd/ipshared/5e7b/hdl/util_vector_logic_v2_0_vl_rfs.v,
+SumadoRestador_bd_util_vector_logic_0_0.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_0_0/sim/SumadoRestador_bd_util_vector_logic_0_0.v,
+SumadoRestador_bd_util_vector_logic_0_1.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_0_1/sim/SumadoRestador_bd_util_vector_logic_0_1.v,
+SumadoRestador_bd_util_vector_logic_2_1.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_1/sim/SumadoRestador_bd_util_vector_logic_2_1.v,
+SumadoRestador_bd_util_vector_logic_2_2.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_2/sim/SumadoRestador_bd_util_vector_logic_2_2.v,
+SumadoRestador_bd_util_vector_logic_2_3.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_3/sim/SumadoRestador_bd_util_vector_logic_2_3.v,
+SumadoRestador_bd_util_vector_logic_2_4.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_4/sim/SumadoRestador_bd_util_vector_logic_2_4.v,
+SumadoRestador_bd_util_vector_logic_2_5.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_5/sim/SumadoRestador_bd_util_vector_logic_2_5.v,
+xlslice_v1_0_vl_rfs.v,verilog,xlslice_v1_0_3,../../../../GRUPO6_TP3_COMISION2.1.gen/sources_1/bd/SumadoRestador_bd/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v,
+SumadoRestador_bd_xlslice_0_3.v,verilog,xil_defaultlib,../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_xlslice_0_3/sim/SumadoRestador_bd_xlslice_0_3.v,
+SumadoRestador_bd.vhd,vhdl,xil_defaultlib,../../../bd/SumadoRestador_bd/sim/SumadoRestador_bd.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

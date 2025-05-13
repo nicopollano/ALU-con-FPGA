@@ -1,0 +1,14 @@
+verilog xil_defaultlib  \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_0_0/sim/SumadoRestador_bd_util_vector_logic_0_0.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_0_1/sim/SumadoRestador_bd_util_vector_logic_0_1.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_1/sim/SumadoRestador_bd_util_vector_logic_2_1.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_2/sim/SumadoRestador_bd_util_vector_logic_2_2.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_3/sim/SumadoRestador_bd_util_vector_logic_2_3.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_4/sim/SumadoRestador_bd_util_vector_logic_2_4.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_util_vector_logic_2_5/sim/SumadoRestador_bd_util_vector_logic_2_5.v" \
+"../../../bd/SumadoRestador_bd/ip/SumadoRestador_bd_xlslice_0_3/sim/SumadoRestador_bd_xlslice_0_3.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

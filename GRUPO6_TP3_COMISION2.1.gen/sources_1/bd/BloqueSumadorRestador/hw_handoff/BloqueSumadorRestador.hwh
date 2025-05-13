@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May  6 02:24:21 2025" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35ti" NAME="BloqueSumadorRestador" PACKAGE="cpg236" SPEEDGRADE="-1L"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="3" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="BUS_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="Ctrl"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="C2" SIGIS="undef" SIGNAME="External_Ports_C2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="BUS_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="CRY" SIGIS="undef" SIGNAME="SumadorRestador_0_Cry">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="Cry"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="OVF" SIGIS="undef" SIGNAME="SumadorRestador_0_Ovf">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="Ovf"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="R_SumadorRestador" RIGHT="0" SIGIS="undef" SIGNAME="SumadorRestador_0_BUS_R">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SumadorRestador_0" PORT="BUS_R"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/SumadorRestador_0" HWVERSION="1.0" INSTANCE="SumadorRestador_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SumadorRestador" VLNV="xilinx.com:module_ref:SumadorRestador:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="BloqueSumadorRestador_SumadorRestador_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="BUS_A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="BUS_B" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_C2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="C2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="BUS_R" RIGHT="0" SIGIS="undef" SIGNAME="SumadorRestador_0_BUS_R">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R_SumadorRestador"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Cry" SIGIS="undef" SIGNAME="SumadorRestador_0_Cry">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CRY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Ctrl" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Ovf" SIGIS="undef" SIGNAME="SumadorRestador_0_Ovf">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="OVF"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

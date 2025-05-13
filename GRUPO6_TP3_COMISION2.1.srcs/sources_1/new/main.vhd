@@ -65,10 +65,11 @@ architecture Behavioral of main is
             BUS_R: out std_logic_vector(3 downto 0)
           );
     end component;    
-    
+    signal R_SumaRestat: std_logic_vector(3 downto 0);
     signal R_ANDBitaBit: std_logic_vector(3 downto 0);
     signal R_ORBitaBit: std_logic_vector(3 downto 0);
     signal R_MultipexorANDOR: std_logic_vector(3 downto 0);
+    
 begin
     SumadorRestador_inst : SumadorRestador
         port map(

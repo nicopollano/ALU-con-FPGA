@@ -12,14 +12,13 @@ entity Multiplexor is
 end Multiplexor;
 
 architecture Behavioral of Multiplexor is
-
 begin
     process(Ctrl, BUS_A, BUS_B)
     begin
         case Ctrl is
             when '0' => BUS_R <= BUS_A;
-            when '1' => BUS_R <= BUS_B;
-        end case;              
+            when others => BUS_R <= BUS_B;
+        end case;
     end process;
-
+    
 end Behavioral;
